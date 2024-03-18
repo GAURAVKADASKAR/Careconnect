@@ -22,16 +22,19 @@ from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
-    path('info/',hospital),
+    path('info/',hospitalinfo),
     path('',enter),
-    path('fill/',fillform),
     path('page/',page),
     path('index/',index),
-    path('fillform/',fillform),
+    path('fillform/<id>/',fillform),
     path('bedbooking/',bedbooking),
+    path('delete_patient/<id>/',delete_patient_data),
     path('login/',enter),
     path('register/',register),
     path('sample/',sample),
+    path('beds/',bedsinfo),
+    path('hospital/',hospital),
+    path('successfull/',success),
     path('admin/', admin.site.urls),
 ]
 if settings.DEBUG:
