@@ -39,7 +39,7 @@ def enter(request):
             
             login(request,user)
             request.session['username']=username
-            request.session.set_expiry(300)
+            request.session.set_expiry(86400)
             user=registration.objects.get(email=username)
             data=profiledata.objects.create(
                 full_name=user.full_name,
