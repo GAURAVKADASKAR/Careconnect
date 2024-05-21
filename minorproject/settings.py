@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-t8g0iz=#f77v-69d-%22a%r@_&857wu6oena_gpd!5@h*qh=s4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app' , '.now.sh']
 
 
 # Application definition
@@ -131,7 +131,7 @@ EMAIL_USE_TLS=True
 EMAIL_PORT= 587
 EMAIL_HOST_USER="kadskargaurav@gmail.com"
 EMAIL_HOST_PASSWORD="sfrxgilmxrvxusyi"
-ALLOWED_HOSTS=[]
+
 
 STATIC_URL='/static/'
 MEDIA_ROUTE = BASE_DIR
@@ -141,3 +141,7 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+STATICFILES_DIRS= os.path.join(BASE_DIR ,'static')
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build' , 'static')
