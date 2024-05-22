@@ -14,9 +14,7 @@ python manage.py migrate
 
 # Create superuser (optional)
 echo "Creating superuser (optional)..."
-python manage.py createsuperuser --noinput \
-    --username minor \
-    --password careconnect
+python create_superuser.py
 
 # Collect static files
 echo "Collecting static files..."

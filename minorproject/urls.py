@@ -46,6 +46,7 @@ urlpatterns = [
     path('hospital/',hospital),
     path('successfull/',success),
     path('admin/', admin.site.urls),
+    path('loginrequired/',required),
 ]
 if settings.DEBUG:
         urlpatterns+= static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

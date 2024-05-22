@@ -14,7 +14,7 @@ def index(request):
         data=registration.objects.filter(email=user)
         return render(request,'index.html',context={'data':data})
     else:
-        return HttpResponse("login required")
+        return render(request,'loginrequired.html')
     
 # login page
 
