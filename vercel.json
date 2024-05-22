@@ -1,22 +1,23 @@
 {
-  "builds": [{
-      "src": "minorproject/wsgi.py",
+  "version": 2,
+  "builds": [
+    {
+      "src": "manage.py",
       "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-  },
-  {
-      "src": "build_files.sh",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "staticfiles_build" }
-  }],
+      "config": { "zeroConfig": true }
+    }
+  ],
   "routes": [
-      {
-          "src": "/static/(.*)",
-          "dest": "/static/$1"
-      },
-      {
-          "src": "/(.*)",
-          "dest": "minorproject/wsgi.py"
-      }
-  ]
+    {
+      "src": "/(.*)",
+      "dest": "/manage.py"
+    }
+  ],
+  "build": {
+    "env": {
+      "DJANGO_SETTINGS_MODULE": "myproject.settings",
+      "SECRET_KEY": "@your-secret-key",
+      "DEBUG": "False"
+    }
+  }
 }
