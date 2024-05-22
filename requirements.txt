@@ -101,6 +101,7 @@ pysiology==0.0.9.6
 python-bidi==0.4.2
 python-dateutil==2.8.2
 python3-openid==3.2.0
+Python == 3.12.1
 pytz==2024.1
 PyWavelets==1.6.0
 PyYAML==6.0.1
