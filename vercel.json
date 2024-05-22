@@ -13,11 +13,9 @@
       "dest": "/manage.py"
     }
   ],
-  "build": {
-    "env": {
-      "DJANGO_SETTINGS_MODULE": "myproject.settings",
-      "SECRET_KEY": "@your-secret-key",
-      "DEBUG": "False"
-    }
+  "env": {
+    "DJANGO_SETTINGS_MODULE": "minorproject.settings",
+    "SECRET_KEY": "@name",
+    "DEBUG": "False"
   }
 }
