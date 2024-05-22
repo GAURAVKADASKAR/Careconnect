@@ -57,7 +57,7 @@ ROOT_URLCONF = 'minorproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'C:\Users\Dell\Downloads\CareConnect-MinorProject-master (5)\CareConnect-MinorProject-master\home\template'],
+        'DIRS': [os.path.join(BASE_DIR, 'home/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
